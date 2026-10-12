@@ -44,7 +44,7 @@ Note: You should not need run other scripts if you're not planning to push to pl
 
 ## Try it on web:
 
-https://flixonstudios.github.io/game-probability/skill-check
+https://flixonstudios.github.io/game-probability/main/oathsworn/skill-check
 
 ## Try it on Android:
 

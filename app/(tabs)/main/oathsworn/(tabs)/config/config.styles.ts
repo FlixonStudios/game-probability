@@ -12,6 +12,7 @@ export const radioGroupStyles: StyleProp<ViewStyle> = {
 
 export const LabelContainer = styled.View`
   padding: 12px;
+  flex-shrink: 1;
 `;
 
 export const Divider = styled.View`

@@ -37,8 +37,14 @@ npm run web
 npm run android
 
 - If starting built locally:
-npm install -g serve
+npm run build:web
 npm run built:web
+
+Then open http://localhost:3000/game-probability/ (not the bare root).
+
+The web build is exported with `experiments.baseUrl` set to `/game-probability/` (see ./app.json) so that it works on GitHub Pages, which hosts the app under that path. This means the built `index.html` requests its JS from `/game-probability/_expo/...`, so serving `dist` directly at `/` will not work. `built:web` therefore copies `dist` into `.serve/game-probability/` and serves `.serve` instead, with a copy of `index.html` at the root of `.serve` so that deep links (e.g. `/game-probability/main/oathsworn/skill-check`) fall back to the app.
+
+If the repo is renamed, update `baseUrl` in ./app.json and the folder name in the `built:web` script to match.
 
 Note: You should not need run other scripts if you're not planning to push to playstore
 
